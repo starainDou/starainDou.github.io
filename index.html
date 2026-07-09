@@ -1,396 +1,297 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BuzzReel - Binge-Worthy Short Dramas</title>
+<title>隐私政策 · 马上挪一挪</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#0c0a09;
-  --surface:#1c1917;
-  --surface2:#292524;
-  --accent:#f59e0b;
-  --accent2:#ef4444;
-  --accent3:#f97316;
-  --text:#fafaf9;
-  --text2:#a8a29e;
-  --radius:16px;
-}
-html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
-a{color:var(--accent);text-decoration:none;transition:color .2s}
-a:hover{color:var(--accent3)}
+  :root {
+    --ink: #241a14;
+    --muted: #82705b;
+    --paper: #faf3e4;
+    --paper-deep: #f0e0bd;
+    --gold: #c99a3f;
+    --jade: #3f7a63;
+    --line: rgba(36, 26, 20, 0.1);
+  }
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(12,10,9,.75);border-bottom:1px solid rgba(245,158,11,.08)}
-.nav-inner{max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.5px}
-.nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{color:var(--text2);font-size:.9rem;font-weight:500;transition:color .2s}
-.nav-links a:hover{color:var(--text)}
-.nav-cta{background:linear-gradient(135deg,var(--accent),var(--accent3));color:#0c0a09!important;padding:8px 20px;border-radius:99px;font-weight:600;font-size:.85rem}
-.nav-cta:hover{opacity:.9}
+  * { box-sizing: border-box; }
 
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-40%;right:-20%;width:800px;height:800px;background:radial-gradient(circle,rgba(245,158,11,.12) 0%,transparent 70%);pointer-events:none}
-.hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(239,68,68,.08) 0%,transparent 70%);pointer-events:none}
-.hero-inner{max-width:1200px;margin:0 auto;padding:120px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid rgba(245,158,11,.2);padding:6px 16px;border-radius:99px;font-size:.8rem;color:var(--accent);margin-bottom:24px}
-.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hero h1{font-size:3.5rem;font-weight:800;line-height:1.1;margin-bottom:20px;letter-spacing:-.02em}
-.hero h1 .gradient{background:linear-gradient(135deg,var(--accent),var(--accent2),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{font-size:1.15rem;color:var(--text2);max-width:460px;margin-bottom:36px}
-.hero-actions{display:flex;gap:16px;align-items:center}
-.btn-primary{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--accent),var(--accent3));color:#0c0a09;padding:14px 28px;border-radius:14px;font-weight:700;font-size:1rem;transition:transform .2s,box-shadow .2s}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(245,158,11,.25)}
-.btn-primary svg{width:20px;height:20px}
-.btn-secondary{display:inline-flex;align-items:center;gap:8px;color:var(--text2);padding:14px 24px;border:1px solid var(--surface2);border-radius:14px;font-weight:500;font-size:1rem;transition:border-color .2s}
-.btn-secondary:hover{border-color:var(--accent);color:var(--text)}
+  body {
+    margin: 0;
+    background: linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 100%);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.75;
+  }
 
-.hero-visual{position:relative;display:flex;justify-content:center}
-.phone-mockup{width:280px;height:580px;background:var(--surface);border-radius:40px;border:2px solid var(--surface2);position:relative;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.4)}
-.phone-screen{position:absolute;inset:4px;border-radius:36px;overflow:hidden;background:#000}
-.phone-screen img{width:100%;height:100%;object-fit:cover;object-position:top}
-.float-card{position:absolute;background:var(--surface);border:1px solid var(--surface2);border-radius:14px;padding:14px 18px;backdrop-filter:blur(10px);box-shadow:0 8px 30px rgba(0,0,0,.3);animation:float 6s ease-in-out infinite}
-.float-card.c1{top:60px;right:-30px;animation-delay:0s}
-.float-card.c2{bottom:100px;left:-40px;animation-delay:2s}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.float-card .fc-icon{font-size:1.2rem;margin-bottom:4px}
-.float-card .fc-num{font-size:1.1rem;font-weight:700;color:var(--text)}
-.float-card .fc-label{font-size:.7rem;color:var(--text2)}
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
 
-/* FEATURES */
-.features{padding:100px 24px;max-width:1200px;margin:0 auto}
-.section-label{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
-.section-title{font-size:2.4rem;font-weight:800;margin-bottom:16px;letter-spacing:-.01em}
-.section-desc{color:var(--text2);font-size:1.05rem;max-width:520px;margin-bottom:56px}
-.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.feature-card{background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius);padding:32px 28px;transition:border-color .3s,transform .3s}
-.feature-card:hover{border-color:rgba(245,158,11,.3);transform:translateY(-4px)}
-.feature-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:1.4rem}
-.feature-card:nth-child(1) .feature-icon{background:rgba(245,158,11,.12)}
-.feature-card:nth-child(2) .feature-icon{background:rgba(239,68,68,.12)}
-.feature-card:nth-child(3) .feature-icon{background:rgba(249,115,22,.12)}
-.feature-card:nth-child(4) .feature-icon{background:rgba(34,197,94,.12)}
-.feature-card:nth-child(5) .feature-icon{background:rgba(99,102,241,.12)}
-.feature-card:nth-child(6) .feature-icon{background:rgba(236,72,153,.12)}
-.feature-card h3{font-size:1.15rem;font-weight:700;margin-bottom:10px}
-.feature-card p{color:var(--text2);font-size:.92rem;line-height:1.6}
+  header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
 
-/* APP PREVIEW */
-.app-preview{padding:100px 24px;background:linear-gradient(180deg,transparent,rgba(245,158,11,.03),transparent)}
-.app-preview-inner{max-width:1200px;margin:0 auto;text-align:center}
-.preview-scroll{display:flex;gap:32px;margin-top:56px;overflow-x:auto;padding:20px 0 40px;scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none}
-.preview-scroll::-webkit-scrollbar{display:none}
-.preview-card{flex:0 0 auto;scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
-.preview-phone{width:220px;height:460px;background:var(--surface);border-radius:32px;border:2px solid var(--surface2);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35);transition:transform .4s,box-shadow .4s;position:relative}
-.preview-phone:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 30px 80px rgba(245,158,11,.12)}
-.preview-phone img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:30px;padding:3px}
-.preview-caption{font-size:.95rem;font-weight:600;color:var(--text)}
-.preview-sub{font-size:.8rem;color:var(--text2);margin-top:2px}
+  .seal {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #b23b2e, #8f2c22);
+    color: #fdf1d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    box-shadow: 0 6px 16px rgba(178, 59, 46, 0.35);
+  }
 
-/* SHOWCASE */
-.showcase{padding:80px 24px}
-.showcase-inner{max-width:1200px;margin:0 auto}
-.showcase-row{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:56px}
-.showcase-row.reverse{direction:rtl}
-.showcase-row.reverse > *{direction:ltr}
-.showcase-visual{border-radius:20px;overflow:hidden;border:1px solid var(--surface2);box-shadow:0 16px 48px rgba(0,0,0,.3)}
-.showcase-visual img{width:100%;display:block}
-.showcase-text{padding:20px 0}
-.showcase-text h3{font-size:1.6rem;font-weight:700;margin-bottom:14px}
-.showcase-text p{color:var(--text2);font-size:1rem;line-height:1.7;margin-bottom:16px}
-.showcase-text ul{list-style:none;padding:0}
-.showcase-text ul li{color:var(--text2);font-size:.92rem;padding:6px 0;padding-left:24px;position:relative}
-.showcase-text ul li::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  h1 {
+    font-size: 26px;
+    margin: 0 0 6px;
+    letter-spacing: 1px;
+  }
 
-/* STATS */
-.stats{padding:80px 24px}
-.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.stat-card{text-align:center;padding:32px 16px;background:var(--surface);border:1px solid var(--surface2);border-radius:var(--radius)}
-.stat-num{font-size:2.2rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
-.stat-label{color:var(--text2);font-size:.9rem}
+  .subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0;
+  }
 
-/* CTA */
-.cta{padding:100px 24px}
-.cta-inner{max-width:800px;margin:0 auto;text-align:center;background:linear-gradient(135deg,rgba(245,158,11,.08),rgba(239,68,68,.06));border:1px solid rgba(245,158,11,.15);border-radius:24px;padding:64px 40px;position:relative;overflow:hidden}
-.cta-inner::before{content:'';position:absolute;top:-50%;right:-30%;width:400px;height:400px;background:radial-gradient(circle,rgba(245,158,11,.1),transparent 70%);pointer-events:none}
-.cta h2{font-size:2rem;font-weight:800;margin-bottom:14px}
-.cta p{color:var(--text2);font-size:1.05rem;margin-bottom:32px}
+  .meta {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 10px;
+  }
 
-/* FOOTER */
-footer{border-top:1px solid var(--surface2);padding:40px 24px}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-.footer-links{display:flex;gap:24px}
-.footer-links a{color:var(--text2);font-size:.85rem}
-.footer-links a:hover{color:var(--text)}
-.footer-copy{color:var(--text2);font-size:.8rem}
+  .card {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 28px 28px 8px;
+    backdrop-filter: blur(2px);
+  }
 
-/* RESPONSIVE */
-@media(max-width:1024px){
-  .hero-inner{grid-template-columns:1fr;text-align:center}
-  .hero p{margin-left:auto;margin-right:auto}
-  .hero-actions{justify-content:center}
-  .hero-visual{margin-top:40px}
-  .features-grid{grid-template-columns:repeat(2,1fr)}
-  .showcase-row{grid-template-columns:1fr;gap:24px}
-  .showcase-row.reverse{direction:ltr}
-  .showcase-visual{max-width:500px;margin:0 auto}
-  .stats-inner{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:640px){
-  .hero h1{font-size:2.4rem}
-  .features-grid{grid-template-columns:1fr}
-  .preview-phone{width:180px;height:380px;border-radius:26px}
-  .preview-scroll{gap:20px}
-  .stats-inner{grid-template-columns:repeat(2,1fr)}
-  .nav-links{display:none}
-  .footer-inner{flex-direction:column;text-align:center}
-}
+  section {
+    margin-bottom: 26px;
+  }
+
+  section:last-child {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 17px;
+    margin: 0 0 10px;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  h2::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    display: inline-block;
+  }
+
+  p, li {
+    font-size: 14.5px;
+    color: #3a2c22;
+  }
+
+  ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  .highlight {
+    background: rgba(63, 122, 99, 0.1);
+    border: 1px solid rgba(63, 122, 99, 0.25);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: #2c5445;
+    font-size: 14px;
+  }
+
+  .contact {
+    background: rgba(201, 154, 63, 0.12);
+    border: 1px solid rgba(201, 154, 63, 0.35);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+
+  .contact a {
+    color: #8a5a12;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .contact a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 32px;
+  }
+
+  hr.divider {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 24px 0;
+  }
 </style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <div class="seal">挪</div>
+      <h1>《马上挪一挪》隐私政策</h1>
+      <p class="subtitle">Privacy Policy for "Slide the Idiom"</p>
+      <p class="meta">生效日期 / Effective Date：2026 年 7 月 1 日 &nbsp;·&nbsp; 版本 1.0</p>
+    </header>
 
-<nav>
-  <div class="nav-inner">
-    <div class="logo">BuzzReel</div>
-    <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#showcase">Discover</a>
-      <a href="privacy/index.html" target="_blank">Privacy</a>
-      <a href="terms.html" target="_blank">Terms</a>
-      <a href="#download" class="nav-cta">Get App</a>
-    </div>
-  </div>
-</nav>
+    <div class="card">
+      <section>
+        <p class="highlight">
+          概要：《马上挪一挪》是一款完全离线运行的成语滑块解谜游戏。我们
+          <strong>不会收集、存储或上传任何可识别您个人身份的信息</strong>，
+          也不包含广告 SDK、统计分析 SDK 或第三方跟踪代码。您的游戏进度仅保存在您自己的设备本地。
+        </p>
+      </section>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <div class="hero-badge">
-        <span class="dot"></span>
-        Now streaming on iOS
-      </div>
-      <h1>Stories That<br><span class="gradient">Keep You Hooked</span></h1>
-      <p>Dive into an ever-growing library of binge-worthy short dramas. Thrilling plots, stunning visuals, and episodes crafted to fit your pace.</p>
-      <div class="hero-actions">
-        <a href="https://apps.apple.com/us/app/id6760459496" class="btn-primary">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          App Store
-        </a>
-        <a href="#features" class="btn-secondary">Learn More &darr;</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="phone-mockup">
-        <div class="phone-screen">
-          <img src="snap/web/buzz1.jpg" alt="BuzzReel Discover Page" loading="eager">
-        </div>
-      </div>
-      <div class="float-card c1">
-        <div class="fc-icon">&#127916;</div>
-        <div class="fc-num">500+</div>
-        <div class="fc-label">Episodes</div>
-      </div>
-      <div class="float-card c2">
-        <div class="fc-icon">&#11088;</div>
-        <div class="fc-num">4.8</div>
-        <div class="fc-label">Rating</div>
-      </div>
-    </div>
-  </div>
-</section>
+      <section>
+        <h2>一、引言</h2>
+        <p>
+          欢迎使用《马上挪一挪》（以下简称"本应用"）。我们非常重视您的隐私。
+          本隐私政策旨在说明本应用在您使用过程中是否收集信息、收集哪些信息，
+          以及我们如何保护这些信息。请您在使用本应用前仔细阅读本政策。
+        </p>
+      </section>
 
-<section class="features" id="features">
-  <div class="section-label">&#9670; Why BuzzReel</div>
-  <h2 class="section-title">Your Drama, Your Rules</h2>
-  <p class="section-desc">Everything you need for the ultimate short-drama experience, designed around how you actually watch.</p>
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">&#127917;</div>
-      <h3>Curated Collections</h3>
-      <p>Hand-picked series across romance, thriller, fantasy, and more. Fresh titles added weekly so there's always something new to binge.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">&#9889;</div>
-      <h3>Instant Play</h3>
-      <p>No loading screens, no buffering. Adaptive streaming delivers crisp playback even on the go with limited connectivity.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">&#128276;</div>
-      <h3>New Episode Alerts</h3>
-      <p>Follow your favorite series and get notified the moment new episodes drop. Never miss a cliffhanger again.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">&#128373;</div>
-      <h3>Offline Mode</h3>
-      <p>Download episodes and watch anywhere — on the subway, on a flight, or somewhere off the grid.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">&#127912;</div>
-      <h3>HD Visually Stunning</h3>
-      <p>Every series is presented in high definition with vivid color grading. Cinema-quality visuals on your phone screen.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">&#128156;</div>
-      <h3>Personalized For You</h3>
-      <p>Smart recommendations learn what you love and surface hidden gems tailored to your taste profile.</p>
-    </div>
-  </div>
-</section>
-
-<section class="app-preview" id="showcase">
-  <div class="app-preview-inner">
-    <div class="section-label">&#9670; App Preview</div>
-    <h2 class="section-title">Beautiful Interface, Effortless Experience</h2>
-    <p class="section-desc" style="margin-left:auto;margin-right:auto">Every screen is designed for immersion — from discovering new series to binge-watching your favorites.</p>
-    <div class="preview-scroll">
-      <div class="preview-card">
-        <div class="preview-phone">
-          <img src="snap/web/buzz1.jpg" alt="Discover Page" loading="lazy">
-        </div>
-        <div class="preview-caption">Discover</div>
-        <div class="preview-sub">Trending & curated picks</div>
-      </div>
-      <div class="preview-card">
-        <div class="preview-phone">
-          <img src="snap/web/buzz2.jpg" alt="Hot & Picks" loading="lazy">
-        </div>
-        <div class="preview-caption">For You</div>
-        <div class="preview-sub">Personalized recommendations</div>
-      </div>
-      <div class="preview-card">
-        <div class="preview-phone">
-          <img src="snap/web/buzz3.jpg" alt="Video Player" loading="lazy">
-        </div>
-        <div class="preview-caption">Immersive Player</div>
-        <div class="preview-sub">Full-screen HD playback</div>
-      </div>
-      <div class="preview-card">
-        <div class="preview-phone">
-          <img src="snap/web/buzz5.jpg" alt="Vertical Shorts" loading="lazy">
-        </div>
-        <div class="preview-caption">Short Reels</div>
-        <div class="preview-sub">Swipe to explore series</div>
-      </div>
-      <div class="preview-card">
-        <div class="preview-phone">
-          <img src="snap/web/buzz4.jpg" alt="Playlist Drawer" loading="lazy">
-        </div>
-        <div class="preview-caption">Quick Access</div>
-        <div class="preview-sub">Continue watching & playlists</div>
-      </div>
-      <div class="preview-card">
-        <div class="preview-phone">
-          <img src="snap/web/buzz6.jpg" alt="Profile Page" loading="lazy">
-        </div>
-        <div class="preview-caption">Your Profile</div>
-        <div class="preview-sub">Favorites, history & settings</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="showcase">
-  <div class="showcase-inner">
-    <div class="section-label">&#9670; How It Works</div>
-    <h2 class="section-title">Designed for Drama Lovers</h2>
-
-    <div class="showcase-row" style="margin-top:56px">
-      <div class="showcase-visual">
-        <img src="snap/web/buzz3.jpg" alt="Full-screen player with episode details">
-      </div>
-      <div class="showcase-text">
-        <h3>Cinema-Quality Player</h3>
-        <p>Tap any episode and dive straight into the action. Our full-screen player puts the story front and center with smooth playback and intuitive controls.</p>
+      <section>
+        <h2>二、我们不收集的信息</h2>
+        <p>本应用不会收集以下任何信息：</p>
         <ul>
-          <li>HD playback with adaptive streaming</li>
-          <li>Episode info & synopsis at a glance</li>
-          <li>Like, favorite, and share with one tap</li>
-          <li>Horizontal episode strip for quick navigation</li>
+          <li>姓名、手机号、邮箱地址等个人身份信息；</li>
+          <li>设备广告标识符（IDFA）或其他用于跨应用追踪的标识符；</li>
+          <li>地理位置信息；</li>
+          <li>照片、摄像头、麦克风、联系人、日历等系统权限相关数据（本应用不会请求上述任何权限）；</li>
+          <li>账号信息 — 本应用无需注册或登录即可完整使用全部功能。</li>
         </ul>
-      </div>
-    </div>
+      </section>
 
-    <div class="showcase-row reverse" style="margin-top:80px">
-      <div class="showcase-visual">
-        <img src="snap/web/buzz1.jpg" alt="Discover page with curated content">
-      </div>
-      <div class="showcase-text">
-        <h3>Discover What's Next</h3>
-        <p>Your home feed is packed with content tailored to your taste. Continue where you left off, explore trending titles, or dig into curated picks just for you.</p>
+      <section>
+        <h2>三、本地存储的信息</h2>
+        <p>
+          为了保存您的游戏进度，本应用会使用系统提供的本地存储（NSUserDefaults）在
+          <strong>您的设备本地</strong>保存以下与游戏体验相关的数据：
+        </p>
         <ul>
-          <li>Continue Watching for seamless binge sessions</li>
-          <li>Hot series with genre tags</li>
-          <li>Personalized "Picks For You" section</li>
-          <li>Trending chart with episode counts</li>
+          <li>关卡通关记录、星级评分与最佳步数；</li>
+          <li>铜钱（游戏内虚拟货币）余额与百宝阁内已拥有的道具/皮肤；</li>
+          <li>每日挑战的连续挑战天数与每日完成记录；</li>
+          <li>成语博物馆的图鉴收集进度；</li>
+          <li>音效、震动反馈、减弱动效等个性化设置开关。</li>
         </ul>
-      </div>
+        <p>
+          以上数据<strong>仅保存在您的设备上，不会被上传到任何服务器，也不会与我们或任何第三方共享</strong>。
+          当您卸载本应用或清除应用数据时，这些信息将被永久删除。
+        </p>
+      </section>
+
+      <section>
+        <h2>四、第三方服务与 SDK</h2>
+        <p>
+          本应用<strong>不集成任何第三方广告 SDK、数据统计 SDK、社交分享 SDK 或崩溃分析 SDK</strong>，
+          不存在任何形式的第三方数据收集或数据共享行为。本应用没有内嵌浏览器或跳转到第三方网站的功能。
+        </p>
+      </section>
+
+      <section>
+        <h2>五、网络连接</h2>
+        <p>
+          本应用为完全离线的单机游戏，运行过程中不需要网络连接，也不会主动发起任何网络请求。
+        </p>
+      </section>
+
+      <section>
+        <h2>六、儿童隐私</h2>
+        <p>
+          本应用内容适合全年龄段用户，包括儿童。由于本应用不收集任何个人信息，
+          因此不存在向儿童收集个人信息的情形，符合相关儿童在线隐私保护要求。
+          如果您是未成年人的监护人，并认为您的孩子在使用本应用时被要求提供了任何个人信息，
+          请通过下方联系方式与我们联系，我们会及时核实处理。
+        </p>
+      </section>
+
+      <section>
+        <h2>七、数据安全</h2>
+        <p>
+          由于本应用不收集、不上传任何用户数据，您的游戏数据始终留存在您自己的设备本地，
+          不存在因服务器传输或存储而产生的数据泄露风险。
+        </p>
+      </section>
+
+      <section>
+        <h2>八、本政策的更新</h2>
+        <p>
+          我们可能会根据应用功能的更新（例如未来新增网络功能、账号系统或第三方服务）适时修订本政策。
+          修订后的政策将随应用更新一并公布，并在本页面顶部标注最新的生效日期。
+          若涉及个人信息收集范围的实质性变更，我们会通过应用内公告或版本更新说明另行提示。
+        </p>
+      </section>
+
+      <section>
+        <h2>九、联系我们</h2>
+        <div class="contact">
+          <p style="margin: 0 0 6px;">
+            如果您对本隐私政策有任何疑问、意见或建议，或希望了解、更正、删除您在本应用中保存的本地数据，
+            欢迎通过以下邮箱与我们联系：
+          </p>
+          <p style="margin: 0; font-size: 16px;">
+            📮 <a href="mailto:fuonlaws@163.com">fuonlaws@163.com</a>
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <section style="margin-bottom: 0;">
+        <h2>English Summary</h2>
+        <p>
+          "Slide the Idiom" ( 马上挪一挪 ) is a fully offline sliding-block puzzle game.
+          The app does <strong>not collect, transmit, or share any personally identifiable information</strong>,
+          and does not integrate any advertising, analytics, or third-party tracking SDKs.
+          Gameplay progress (level completion, stars, coins, daily-challenge streaks, collected idioms, and
+          settings) is stored only locally on your device using standard iOS local storage, and is
+          permanently removed when you delete the app. No account, network connection, or device
+          permission (camera, photos, location, microphone, contacts) is required to use the app.
+          If you have any questions about this policy, please contact us at
+          <a href="mailto:fuonlaws@163.com">fuonlaws@163.com</a>.
+        </p>
+      </section>
     </div>
 
-    <div class="showcase-row" style="margin-top:80px">
-      <div class="showcase-visual">
-        <img src="snap/web/buzz6.jpg" alt="Profile page with favorites and history">
-      </div>
-      <div class="showcase-text">
-        <h3>Your Space, Your Way</h3>
-        <p>Everything you care about in one place. Track your favorites, revisit your watch history, and manage your experience from a clean, personal dashboard.</p>
-        <ul>
-          <li>Favorites, Watched, and Liked counts</li>
-          <li>One-tap access to watch history</li>
-          <li>Rate us & share with friends</li>
-          <li>Full settings control</li>
-        </ul>
-      </div>
-    </div>
+    <footer>
+      © 2026 马上挪一挪 
+    </footer>
   </div>
-</section>
-
-<section class="stats">
-  <div class="stats-inner">
-    <div class="stat-card">
-      <div class="stat-num">200+</div>
-      <div class="stat-label">Original Series</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num">5K+</div>
-      <div class="stat-label">Episodes Available</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num">50M+</div>
-      <div class="stat-label">Views Monthly</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num">4.8</div>
-      <div class="stat-label">App Store Rating</div>
-    </div>
-  </div>
-</section>
-
-<section class="cta" id="download">
-  <div class="cta-inner">
-    <h2>Start Watching Now</h2>
-    <p>Download BuzzReel for free. Your next favorite drama is one tap away.</p>
-    <a href="https://apps.apple.com/us/app/id6760459496" class="btn-primary">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-      Download on App Store
-    </a>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="BuzzReel/">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="mailto:buzz_reel@outlook.com">Contact Us</a>
-    </div>
-    <div class="footer-copy">&copy; 2026 BuzzReel. All rights reserved.</div>
-  </div>
-</footer>
-
 </body>
 </html>
